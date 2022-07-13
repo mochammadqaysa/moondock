@@ -109,6 +109,46 @@ class Home extends StatelessWidget {
                 ),
               ),
               Container(
+                margin: EdgeInsets.only(top: 15, left: 8, right: 8),
+                height: 200,
+                child: GridView.count(
+                  scrollDirection: Axis.horizontal,
+                  crossAxisCount: 2,
+                  children: [
+                    Card(
+                      child: Text("Losmen"),
+                    ),
+                    Card(
+                      child: Text("Hostel"),
+                    ),
+                    Card(
+                      child: Text("GuestHouse"),
+                    ),
+                    Card(
+                      child: Text("Hotel"),
+                    ),
+                    Card(
+                      child: Text("Budget Hotel"),
+                    ),
+                    Card(
+                      child: Text("Boutique Hotel"),
+                    ),
+                    Card(
+                      child: Text("Apartemen"),
+                    ),
+                    Card(
+                      child: Text("Homestay"),
+                    ),
+                    Card(
+                      child: Text("Resort"),
+                    ),
+                    Card(
+                      child: Text("Villa"),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
                 alignment: Alignment.centerLeft,
                 margin: EdgeInsets.only(top: 20, left: 16),
                 child: Text(
@@ -303,7 +343,6 @@ class Home extends StatelessWidget {
                                       child: Text(
                                         'Trans Luxury Hotel',
                                         style: TextStyle(
-                                          fontSize: 19,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -312,13 +351,22 @@ class Home extends StatelessWidget {
                                       padding:
                                           EdgeInsets.only(top: 3, left: 11),
                                       child: Text(
-                                        'segini',
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                        ),
+                                        'Gatot Subroto, Bandung',
+                                        style: TextStyle(color: Colors.black45),
                                       ),
                                     ),
                                     Spacer(flex: 1),
+                                    Container(
+                                      width: 180,
+                                      margin: EdgeInsets.only(bottom: 10),
+                                      alignment: Alignment.centerRight,
+                                      child: Text(
+                                        "Rp. 1jt / malam",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 16),
+                                      ),
+                                    ),
                                     Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
@@ -327,14 +375,14 @@ class Home extends StatelessWidget {
                                               padding: EdgeInsets.only(
                                                   left: 11, bottom: 11),
                                               child: Icon(
-                                                Icons.book_outlined,
+                                                Icons.location_on_rounded,
                                                 size: 13,
                                               )),
                                           Padding(
                                             padding: EdgeInsets.only(
                                                 left: 5, bottom: 11),
                                             child: Text(
-                                              'luxury',
+                                              '1 km',
                                               style: TextStyle(
                                                 fontSize: 13,
                                                 fontWeight: FontWeight.bold,
@@ -383,122 +431,137 @@ class Home extends StatelessWidget {
                           ))),
                   Padding(
                       padding: EdgeInsets.only(top: 8, bottom: 8),
-                      child: Container(
-                          height: 140,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.15),
-                                spreadRadius: 1,
-                                blurRadius: 3,
-                                offset:
-                                    Offset(0, 2), // changes position of shadow
-                              ),
-                            ],
-                          ),
-                          child: Row(
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
-                                child: Image.asset(
-                                  'images/hotel2.jpg',
-                                  height: 140,
+                      child: InkWell(
+                        onTap: () {
+                          print("hai sayang");
+                        },
+                        child: Container(
+                            height: 140,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10),
+                                  bottomLeft: Radius.circular(10),
+                                  bottomRight: Radius.circular(10)),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.15),
+                                  spreadRadius: 1,
+                                  blurRadius: 3,
+                                  offset: Offset(
+                                      0, 2), // changes position of shadow
                                 ),
-                              ),
-                              Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                          top: 21, left: 11, right: 10),
-                                      child: Text(
-                                        'Trans Luxury Hotel',
-                                        style: TextStyle(
-                                          fontSize: 19,
-                                          fontWeight: FontWeight.bold,
+                              ],
+                            ),
+                            child: Row(
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.asset(
+                                    'images/hotel1.jpg',
+                                    height: 140,
+                                  ),
+                                ),
+                                Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                            top: 21, left: 11, right: 10),
+                                        child: Text(
+                                          'Trans Luxury Hotel',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding:
-                                          EdgeInsets.only(top: 3, left: 11),
-                                      child: Text(
-                                        'segini',
-                                        style: TextStyle(
-                                          fontSize: 15,
+                                      Padding(
+                                        padding:
+                                            EdgeInsets.only(top: 3, left: 11),
+                                        child: Text(
+                                          'Gatot Subroto, Bandung',
+                                          style:
+                                              TextStyle(color: Colors.black45),
                                         ),
                                       ),
-                                    ),
-                                    Spacer(flex: 1),
-                                    Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Padding(
+                                      Spacer(flex: 1),
+                                      Container(
+                                        width: 180,
+                                        margin: EdgeInsets.only(bottom: 10),
+                                        alignment: Alignment.centerRight,
+                                        child: Text(
+                                          "Rp. 1jt / malam",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.w700,
+                                              fontSize: 16),
+                                        ),
+                                      ),
+                                      Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 11, bottom: 11),
+                                                child: Icon(
+                                                  Icons.location_on_rounded,
+                                                  size: 13,
+                                                )),
+                                            Padding(
                                               padding: EdgeInsets.only(
-                                                  left: 11, bottom: 11),
-                                              child: Icon(
-                                                Icons.book_outlined,
-                                                size: 13,
-                                              )),
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                                left: 5, bottom: 11),
-                                            child: Text(
-                                              'luxury',
-                                              style: TextStyle(
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.bold,
+                                                  left: 5, bottom: 11),
+                                              child: Text(
+                                                '1 km',
+                                                style: TextStyle(
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                          Padding(
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 11, bottom: 11),
+                                                child: Icon(
+                                                  Icons.calendar_month_outlined,
+                                                  size: 13,
+                                                )),
+                                            Padding(
                                               padding: EdgeInsets.only(
-                                                  left: 11, bottom: 11),
-                                              child: Icon(
-                                                Icons.calendar_month_outlined,
-                                                size: 13,
-                                              )),
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                                left: 5, bottom: 11),
-                                            child: Text(
-                                              '4 jan',
-                                              style: TextStyle(
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.bold,
+                                                  left: 5, bottom: 11),
+                                              child: Text(
+                                                '4 jan',
+                                                style: TextStyle(
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                          Padding(
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 11, bottom: 11),
+                                                child: Icon(
+                                                  Icons.star_border_rounded,
+                                                  size: 13,
+                                                )),
+                                            Padding(
                                               padding: EdgeInsets.only(
-                                                  left: 11, bottom: 11),
-                                              child: Icon(
-                                                Icons.star_border_rounded,
-                                                size: 13,
-                                              )),
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                                left: 5, bottom: 11),
-                                            child: Text(
-                                              '9.3',
-                                              style: TextStyle(
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.bold,
+                                                  left: 5, bottom: 11),
+                                              child: Text(
+                                                '9.3',
+                                                style: TextStyle(
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                        ])
-                                  ])
-                            ],
-                          ))),
+                                          ])
+                                    ])
+                              ],
+                            )),
+                      )),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Card(
