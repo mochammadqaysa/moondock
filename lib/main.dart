@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moondock/screen/carousel_demo.dart';
 import 'package:moondock/screen/detail_hotel.dart';
 import 'package:moondock/screen/home.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: DetailHotel(),
+      home: Home(),
     );
   }
 }
