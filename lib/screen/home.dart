@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:moondock/screen/detail_hotel.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -303,132 +304,142 @@ class Home extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Padding(
-                      padding: EdgeInsets.only(top: 8, bottom: 8),
-                      child: Container(
-                          height: 140,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.15),
-                                spreadRadius: 1,
-                                blurRadius: 3,
-                                offset:
-                                    Offset(0, 2), // changes position of shadow
-                              ),
-                            ],
-                          ),
-                          child: Row(
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
-                                child: Image.asset(
-                                  'images/hotel2.jpg',
-                                  height: 140,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DetailHotel()));
+                    },
+                    child: Padding(
+                        padding: EdgeInsets.only(top: 8, bottom: 8),
+                        child: Container(
+                            height: 140,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10),
+                                  bottomLeft: Radius.circular(10),
+                                  bottomRight: Radius.circular(10)),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.15),
+                                  spreadRadius: 1,
+                                  blurRadius: 3,
+                                  offset: Offset(
+                                      0, 2), // changes position of shadow
                                 ),
-                              ),
-                              Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                          top: 21, left: 11, right: 10),
-                                      child: Text(
-                                        'Trans Luxury Hotel',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
+                              ],
+                            ),
+                            child: Row(
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.asset(
+                                    'images/hotel2.jpg',
+                                    height: 140,
+                                  ),
+                                ),
+                                Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                            top: 21, left: 11, right: 10),
+                                        child: Text(
+                                          'Trans Luxury Hotel',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding:
-                                          EdgeInsets.only(top: 3, left: 11),
-                                      child: Text(
-                                        'Gatot Subroto, Bandung',
-                                        style: TextStyle(color: Colors.black45),
+                                      Padding(
+                                        padding:
+                                            EdgeInsets.only(top: 3, left: 11),
+                                        child: Text(
+                                          'Gatot Subroto, Bandung',
+                                          style:
+                                              TextStyle(color: Colors.black45),
+                                        ),
                                       ),
-                                    ),
-                                    Spacer(flex: 1),
-                                    Container(
-                                      width: 180,
-                                      margin: EdgeInsets.only(bottom: 10),
-                                      alignment: Alignment.centerRight,
-                                      child: Text(
-                                        "Rp. 1jt / malam",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 16),
+                                      Spacer(flex: 1),
+                                      Container(
+                                        width: 180,
+                                        margin: EdgeInsets.only(bottom: 10),
+                                        alignment: Alignment.centerRight,
+                                        child: Text(
+                                          "Rp. 1jt / malam",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.w700,
+                                              fontSize: 16),
+                                        ),
                                       ),
-                                    ),
-                                    Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Padding(
+                                      Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 11, bottom: 11),
+                                                child: Icon(
+                                                  Icons.location_on_rounded,
+                                                  size: 13,
+                                                )),
+                                            Padding(
                                               padding: EdgeInsets.only(
-                                                  left: 11, bottom: 11),
-                                              child: Icon(
-                                                Icons.location_on_rounded,
-                                                size: 13,
-                                              )),
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                                left: 5, bottom: 11),
-                                            child: Text(
-                                              '1 km',
-                                              style: TextStyle(
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.bold,
+                                                  left: 5, bottom: 11),
+                                              child: Text(
+                                                '1 km',
+                                                style: TextStyle(
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                          Padding(
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 11, bottom: 11),
+                                                child: Icon(
+                                                  Icons.calendar_month_outlined,
+                                                  size: 13,
+                                                )),
+                                            Padding(
                                               padding: EdgeInsets.only(
-                                                  left: 11, bottom: 11),
-                                              child: Icon(
-                                                Icons.calendar_month_outlined,
-                                                size: 13,
-                                              )),
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                                left: 5, bottom: 11),
-                                            child: Text(
-                                              '4 jan',
-                                              style: TextStyle(
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.bold,
+                                                  left: 5, bottom: 11),
+                                              child: Text(
+                                                '4 jan',
+                                                style: TextStyle(
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                          Padding(
+                                            Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: 11, bottom: 11),
+                                                child: Icon(
+                                                  Icons.star_border_rounded,
+                                                  size: 13,
+                                                )),
+                                            Padding(
                                               padding: EdgeInsets.only(
-                                                  left: 11, bottom: 11),
-                                              child: Icon(
-                                                Icons.star_border_rounded,
-                                                size: 13,
-                                              )),
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                                left: 5, bottom: 11),
-                                            child: Text(
-                                              '9.3',
-                                              style: TextStyle(
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.bold,
+                                                  left: 5, bottom: 11),
+                                              child: Text(
+                                                '9.3',
+                                                style: TextStyle(
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                        ])
-                                  ])
-                            ],
-                          ))),
+                                          ])
+                                    ])
+                              ],
+                            ))),
+                  ),
                   Padding(
                       padding: EdgeInsets.only(top: 8, bottom: 8),
                       child: InkWell(
@@ -562,79 +573,6 @@ class Home extends StatelessWidget {
                               ],
                             )),
                       )),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Card(
-                      margin: EdgeInsets.only(bottom: 15),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16)),
-                      child: InkWell(
-                        customBorder: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16)),
-                        child: Container(
-                            width: MediaQuery.of(context).size.width,
-                            height: 150,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Row(
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(16),
-                                          bottomLeft: Radius.circular(16)),
-                                      child: Image.asset(
-                                        "images/hotel2.jpg",
-                                        height: 150,
-                                        width: 150,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Column(
-                                        children: [
-                                          ListTile(
-                                            title: Text(
-                                              "Trans Luxury Hotel",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            subtitle:
-                                                Text("Gatot Subroto, Bandung"),
-                                          ),
-                                          ListTile(
-                                            title: Row(
-                                              children: [
-                                                Icon(
-                                                    Icons.location_on_outlined),
-                                                Text("Hotel ituu"),
-                                              ],
-                                            ),
-                                            subtitle: Row(
-                                              children: [
-                                                Icon(Icons.star),
-                                                Icon(Icons.star),
-                                                Icon(Icons.star),
-                                                Icon(Icons.star),
-                                                Icon(Icons.star),
-                                              ],
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            )),
-                        onTap: () {},
-                        splashColor: Colors.black.withOpacity(.2),
-                        highlightColor: Colors.blue.withOpacity(.3),
-                      ),
-                      elevation: 2,
-                    ),
-                  )
                 ],
               ),
             ],

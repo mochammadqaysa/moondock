@@ -23,200 +23,288 @@ class DetailHotel extends StatelessWidget {
               children: [
                 Positioned(
                   child: Container(
-                    child: Image.network(imgList[1],),
+                    child: Image.network(
+                      imgList[1],
                     ),
+                  ),
                 ),
                 Positioned(
-                  top: 240,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))
-                    ),
-                    height: 700,
-                    width: MediaQuery.of(context).size.width,
+                    top: 200,
                     child: Container(
-                      margin: EdgeInsets.only(left: 20, top: 20, right: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(20),
+                              topRight: Radius.circular(20))),
+                      height: 700,
+                      width: MediaQuery.of(context).size.width,
+                      child: Container(
+                        margin: EdgeInsets.only(left: 20, top: 20, right: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Trans Luxury Hotel",
+                                    style: TextStyle(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text(
+                                    "\$ 20 ",
+                                    style: TextStyle(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text("Trans Luxury Hotel", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
-                                Text("\$ 20 ", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+                                Icon(
+                                  Icons.location_on,
+                                  color: Colors.black45,
+                                  size: 15,
+                                ),
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Text(
+                                  "Kota Bandung",
+                                  style: TextStyle(color: Colors.black45),
+                                )
                               ],
                             ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Icon(Icons.location_on, color: Colors.black45 ,size: 15,),
-                              SizedBox(width: 4,),
-                              Text("Kota Bandung", style: TextStyle(color: Colors.black45),)
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            children: [
-                              Icon(Icons.star_outlined, color: Colors.amber, size: 18,),
-                              Icon(Icons.star_outlined, color: Colors.amber, size: 18,),
-                              Icon(Icons.star_outlined, color: Colors.amber, size: 18,),
-                              Icon(Icons.star_outlined, color: Colors.amber, size: 18,),
-                              Icon(Icons.star_half_outlined, color: Colors.amber, size: 18,),
-                              Container(
-                                margin: EdgeInsets.only(left: 5),
-                                alignment: Alignment.bottomCenter,
-                                child: Text("4.5", style: TextStyle(fontSize: 11, color: Colors.black54),),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                padding: EdgeInsets.all(2),
-                                alignment: Alignment.center,
-                                height: 20,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: Colors.blueAccent.withOpacity(0.3)
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.star_outlined,
+                                  color: Colors.amber,
+                                  size: 18,
                                 ),
-                                child: Text("Hotel", style: TextStyle(color: Colors.blue),),
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Container(
-                                alignment: Alignment.center,
-                                height: 20,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: Colors.blueAccent.withOpacity(0.3)
+                                Icon(
+                                  Icons.star_outlined,
+                                  color: Colors.amber,
+                                  size: 18,
                                 ),
-                                child: Text("Recomended", style: TextStyle(color: Colors.blue),),
-                              ),
-
-                              
-                            ],
-                          ),
-                          DefaultTabController(
-                            length: 3,
-                            initialIndex: 0,
-                            child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: <Widget>[
-                              Container(
-                                child: TabBar(
-                                  labelColor: Colors.green,
-                                  unselectedLabelColor: Colors.black,
-                                  labelPadding: EdgeInsets.all(10),
-                                  tabs: [
-                                    Tab(text: 'Deskripsi'),
-                                    Tab(text: 'Ruangan'),
-                                    Tab(text: 'Reviews'),
-                                  ],
+                                Icon(
+                                  Icons.star_outlined,
+                                  color: Colors.amber,
+                                  size: 18,
                                 ),
-                              ),
-                              Container(
-                                height: 400, //height of TabBarView
-                                decoration: BoxDecoration(
-                                  border: Border(top: BorderSide(color: Colors.grey, width: 0.5))
+                                Icon(
+                                  Icons.star_outlined,
+                                  color: Colors.amber,
+                                  size: 18,
                                 ),
-                                child: TabBarView(children: <Widget>[
-                                  Container(
-                                    child: Center(
-                                      child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare placerat odio sit amet accumsan. Mauris gravida odio quis quam varius, nec vestibulum lacus viverra. Nunc lacus enim, ullamcorper quis arcu in, molestie facilisis felis. Aliquam tempor massa lorem, vitae posuere lorem bibendum sit amet. Aenean in ligula ac mi hendrerit ultrices. Aenean sed dignissim augue. Etiam non urna ut nisl aliquet venenatis et quis justo. Integer egestas, massa sed tincidunt tempus, odio lorem commodo sem, eu consequat felis mi ut diam. Duis euismod tincidunt suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam luctus, felis quis lacinia accumsan, mauris ex mollis turpis, vel consequat orci enim suscipit purus.', style: TextStyle(fontSize: 16,)),
-                                    ),
+                                Icon(
+                                  Icons.star_half_outlined,
+                                  color: Colors.amber,
+                                  size: 18,
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(left: 5),
+                                  alignment: Alignment.bottomCenter,
+                                  child: Text(
+                                    "4.5",
+                                    style: TextStyle(
+                                        fontSize: 11, color: Colors.black54),
                                   ),
-                                  Container(
-                                    child: CarouselSlider(
-                                      options: CarouselOptions(height: 400.0),
-                                      items: [1,2,3,4,5].map((i) {
-                                        return Builder(
-                                          builder: (BuildContext context) {
-                                            return Container(
-                                              width: MediaQuery.of(context).size.width,
-                                              margin: EdgeInsets.symmetric(horizontal: 5.0),
-                                              decoration: BoxDecoration(
-                                                color: Colors.amber
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.all(2),
+                                  alignment: Alignment.center,
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color:
+                                          Colors.blueAccent.withOpacity(0.3)),
+                                  child: Text(
+                                    "Hotel",
+                                    style: TextStyle(color: Colors.blue),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Container(
+                                  alignment: Alignment.center,
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color:
+                                          Colors.blueAccent.withOpacity(0.3)),
+                                  child: Text(
+                                    "Recomended",
+                                    style: TextStyle(color: Colors.blue),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            DefaultTabController(
+                                length: 3,
+                                initialIndex: 0,
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
+                                    children: <Widget>[
+                                      Container(
+                                        child: TabBar(
+                                          labelColor: Colors.green,
+                                          unselectedLabelColor: Colors.black,
+                                          labelPadding: EdgeInsets.all(10),
+                                          tabs: [
+                                            Tab(text: 'Deskripsi'),
+                                            Tab(text: 'Ruangan'),
+                                            Tab(text: 'Reviews'),
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                          height: 400, //height of TabBarView
+                                          decoration: BoxDecoration(
+                                              border: Border(
+                                                  top: BorderSide(
+                                                      color: Colors.grey,
+                                                      width: 0.5))),
+                                          child: TabBarView(children: <Widget>[
+                                            Container(
+                                              child: Center(
+                                                child: Text(
+                                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare placerat odio sit amet accumsan. Mauris gravida odio quis quam varius, nec vestibulum lacus viverra. Nunc lacus enim, ullamcorper quis arcu in, molestie facilisis felis. Aliquam tempor massa lorem, vitae posuere lorem bibendum sit amet. Aenean in ligula ac mi hendrerit ultrices. Aenean sed dignissim augue. Etiam non urna ut nisl aliquet venenatis et quis justo. Integer egestas, massa sed tincidunt tempus, odio lorem commodo sem, eu consequat felis mi ut diam. Duis euismod tincidunt suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam luctus, felis quis lacinia accumsan, mauris ex mollis turpis, vel consequat orci enim suscipit purus.',
+                                                    style: TextStyle(
+                                                      fontSize: 16,
+                                                    )),
                                               ),
-                                              child: Text('text $i', style: TextStyle(fontSize: 16.0),)
-                                            );
-                                          },
-                                        );
-                                      }).toList(),
-                                    ),
-                                  ),
-                                  Container(
-                                    child: Center(
-                                      child: Text('Qaysa Si Paling', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-                                    ),
-                                  ),
-                                ])
-                              )
-                            ])
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              ElevatedButton(
-                                style: ButtonStyle(
-                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                        RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(10.0),
-                                        )
-                                      )
-                                  ),
-                                onPressed: (){},
-                                child: Icon(Icons.favorite)
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              SizedBox(
-                                width: 263,
-                                child: ElevatedButton(
-                                  style: ButtonStyle(
-                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                        RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(10.0),
-                                        )
-                                      )
-                                  ),
-                                  onPressed: (){},
-                                  child: Text("Book Now (\$ 20)")
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
+                                            ),
+                                            Container(
+                                              child: CarouselSlider(
+                                                options: CarouselOptions(
+                                                    height: 400.0),
+                                                items: [1, 2, 3, 4, 5].map((i) {
+                                                  return Builder(
+                                                    builder:
+                                                        (BuildContext context) {
+                                                      return Container(
+                                                          width: MediaQuery.of(
+                                                                  context)
+                                                              .size
+                                                              .width,
+                                                          margin: EdgeInsets
+                                                              .symmetric(
+                                                                  horizontal:
+                                                                      5.0),
+                                                          decoration:
+                                                              BoxDecoration(
+                                                                  color: Colors
+                                                                      .amber),
+                                                          child: Text(
+                                                            'text $i',
+                                                            style: TextStyle(
+                                                                fontSize: 16.0),
+                                                          ));
+                                                    },
+                                                  );
+                                                }).toList(),
+                                              ),
+                                            ),
+                                            Container(
+                                              child: Center(
+                                                child: Text('Qaysa Si Paling',
+                                                    style: TextStyle(
+                                                        fontSize: 22,
+                                                        fontWeight:
+                                                            FontWeight.bold)),
+                                              ),
+                                            ),
+                                          ]))
+                                    ])),
+                          ],
+                        ),
                       ),
-                    ),
-                  )
+                    )),
+                Positioned(
+                  left: 25,
+                  bottom: 10,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                          style: ButtonStyle(
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ))),
+                          onPressed: () {},
+                          child: Icon(Icons.favorite)),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      SizedBox(
+                        width: 263,
+                        child: ElevatedButton(
+                            style: ButtonStyle(
+                                shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ))),
+                            onPressed: () {},
+                            child: Text("Book Now (\$ 20)")),
+                      ),
+                    ],
+                  ),
                 ),
-                
+                Positioned(
+                    left: 10,
+                    top: 10,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            color: Colors.black26),
+                        child: Icon(
+                          Icons.arrow_back_ios_new,
+                          color: Colors.white,
+                        ),
+                      ),
+                    )),
               ],
             ),
           ),
         ),
       ),
     );
-
-    
   }
 
   Widget label() {
-      return Container(
-        height: 25,
-        width: 50,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-            color: Colors.cyan, borderRadius: BorderRadius.circular(30)),
-        child: Text("Hotel"),
-      );
-    }
+    return Container(
+      height: 25,
+      width: 50,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+          color: Colors.cyan, borderRadius: BorderRadius.circular(30)),
+      child: Text("Hotel"),
+    );
+  }
 }
