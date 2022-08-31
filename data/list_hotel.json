@@ -1,0 +1,155 @@
+{
+    "rm" : "success",
+    "data" : [
+        {
+            "hotelName" : "GH Universal Hotel",
+            "mainPict" : "joo",
+            "desc" : "loremIpsum",
+            "category" : "loremIpsum",
+            "address" : "jalan",
+            "price" : 200.0,
+            "score" : 5.0,
+            "gallery" : [
+                "https:",
+                "https:",
+                "https:",
+                "https:"
+            ]
+        },
+        {
+            "hotelName" : "Trans Luxury Hotel",
+            "mainPict" : "joo",
+            "desc" : "loremIpsum",
+            "category" : "loremIpsum",
+            "address" : "Jl. Gatot Subroto",
+            "price" : 200.0,
+            "score" : 5.0,
+            "gallery" : [
+                "https:",
+                "https:",
+                "https:",
+                "https:"
+            ]
+        },
+        {
+            "hotelName" : "Ibis Hotel",
+            "mainPict" : "joo",
+            "desc" : "loremIpsum",
+            "category" : "loremIpsum",
+            "address" : "Jl. Gatot Subroto",
+            "price" : 200.0,
+            "score" : 5.0,
+            "gallery" : [
+                "https:",
+                "https:",
+                "https:",
+                "https:"
+            ]
+        },
+        {
+            "hotelName" : "Pullman Bandung Grand Central",
+            "mainPict" : "joo",
+            "desc" : "loremIpsum",
+            "category" : "loremIpsum",
+            "address" : "Jl. Diponegoro 27, Bandung 40115 Indonesia",
+            "price" : 200.0,
+            "score" : 5.0,
+            "gallery" : [
+                "https:",
+                "https:",
+                "https:",
+                "https:"
+            ]
+        },
+        {
+            "hotelName" : "Grand Mercure Bandung",
+            "mainPict" : "joo",
+            "desc" : "loremIpsum",
+            "category" : "loremIpsum",
+            "address" : "Jl. Setia Budi",
+            "price" : 200.0,
+            "score" : 5.0,
+            "gallery" : [
+                "https:",
+                "https:",
+                "https:",
+                "https:"
+            ]
+        },
+        {
+            "hotelName" : "Aryaduta Hotel",
+            "mainPict" : "joo",
+            "desc" : "loremIpsum",
+            "category" : "loremIpsum",
+            "address" : "Jl. Setia Budi",
+            "price" : 200.0,
+            "score" : 5.0,
+            "gallery" : [
+                "https:",
+                "https:",
+                "https:",
+                "https:"
+            ]
+        },
+        {
+            "hotelName" : "Hilton Hotel",
+            "mainPict" : "joo",
+            "desc" : "loremIpsum",
+            "category" : "loremIpsum",
+            "address" : "Jl. Setia Budi",
+            "price" : 200.0,
+            "score" : 5.0,
+            "gallery" : [
+                "https:",
+                "https:",
+                "https:",
+                "https:"
+            ]
+        },
+        {
+            "hotelName" : "Sheraton Hotel",
+            "mainPict" : "joo",
+            "desc" : "loremIpsum",
+            "category" : "loremIpsum",
+            "address" : "Jl. Setia Budi",
+            "price" : 200.0,
+            "score" : 5.0,
+            "gallery" : [
+                "https:",
+                "https:",
+                "https:",
+                "https:"
+            ]
+        },
+        {
+            "hotelName" : "Padma Hotel",
+            "mainPict" : "joo",
+            "desc" : "loremIpsum",
+            "category" : "loremIpsum",
+            "address" : "Jl. Setia Budi",
+            "price" : 200.0,
+            "score" : 5.0,
+            "gallery" : [
+                "https:",
+                "https:",
+                "https:",
+                "https:"
+            ]
+        },
+        {
+            "hotelName" : "The Gaia Hotel",
+            "mainPict" : "joo",
+            "desc" : "loremIpsum",
+            "category" : "loremIpsum",
+            "address" : "Jl. Setia Budi",
+            "price" : 200.0,
+            "score" : 5.0,
+            "gallery" : [
+                "https:",
+                "https:",
+                "https:",
+                "https:"
+            ]
+        }
+    ]
+}
