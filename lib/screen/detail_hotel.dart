@@ -1,8 +1,27 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 
 class DetailHotel extends StatelessWidget {
-  const DetailHotel({Key? key}) : super(key: key);
+  final String? hotelName;
+  final String? mainPict;
+  final String? desc;
+  final String? category;
+  final String? address;
+  final double? price;
+  final double? score;
+  final List<String>? gallery;
+  const DetailHotel(
+      {Key? key,
+      this.hotelName,
+      this.mainPict,
+      this.desc,
+      this.category,
+      this.address,
+      this.price,
+      this.score,
+      this.gallery})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +42,8 @@ class DetailHotel extends StatelessWidget {
               children: [
                 Positioned(
                   child: Container(
-                    child: Image.network(
-                      imgList[1],
+                    child: Image.asset(
+                      mainPict.toString(),
                     ),
                   ),
                 ),
@@ -36,7 +55,7 @@ class DetailHotel extends StatelessWidget {
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(20),
                               topRight: Radius.circular(20))),
-                      height: 700,
+                      height: 950,
                       width: MediaQuery.of(context).size.width,
                       child: Container(
                         margin: EdgeInsets.only(left: 20, top: 20, right: 20),
@@ -49,7 +68,7 @@ class DetailHotel extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    "Trans Luxury Hotel",
+                                    hotelName.toString(),
                                     style: TextStyle(
                                         fontSize: 24,
                                         fontWeight: FontWeight.bold),
@@ -176,7 +195,7 @@ class DetailHotel extends StatelessWidget {
                                         ),
                                       ),
                                       Container(
-                                          height: 400, //height of TabBarView
+                                          height: 450, //height of TabBarView
                                           decoration: BoxDecoration(
                                               border: Border(
                                                   top: BorderSide(
@@ -184,9 +203,9 @@ class DetailHotel extends StatelessWidget {
                                                       width: 0.5))),
                                           child: TabBarView(children: <Widget>[
                                             Container(
+                                              height: 1000,
                                               child: Center(
-                                                child: Text(
-                                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare placerat odio sit amet accumsan. Mauris gravida odio quis quam varius, nec vestibulum lacus viverra. Nunc lacus enim, ullamcorper quis arcu in, molestie facilisis felis. Aliquam tempor massa lorem, vitae posuere lorem bibendum sit amet. Aenean in ligula ac mi hendrerit ultrices. Aenean sed dignissim augue. Etiam non urna ut nisl aliquet venenatis et quis justo. Integer egestas, massa sed tincidunt tempus, odio lorem commodo sem, eu consequat felis mi ut diam. Duis euismod tincidunt suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam luctus, felis quis lacinia accumsan, mauris ex mollis turpis, vel consequat orci enim suscipit purus.',
+                                                child: Text(desc.toString(),
                                                     style: TextStyle(
                                                       fontSize: 16,
                                                     )),
@@ -196,28 +215,27 @@ class DetailHotel extends StatelessWidget {
                                               child: CarouselSlider(
                                                 options: CarouselOptions(
                                                     height: 400.0),
-                                                items: [1, 2, 3, 4, 5].map((i) {
+                                                items: gallery?.map((i) {
                                                   return Builder(
                                                     builder:
                                                         (BuildContext context) {
                                                       return Container(
-                                                          width: MediaQuery.of(
-                                                                  context)
-                                                              .size
-                                                              .width,
-                                                          margin: EdgeInsets
-                                                              .symmetric(
-                                                                  horizontal:
-                                                                      5.0),
-                                                          decoration:
-                                                              BoxDecoration(
-                                                                  color: Colors
-                                                                      .amber),
-                                                          child: Text(
-                                                            'text $i',
-                                                            style: TextStyle(
-                                                                fontSize: 16.0),
-                                                          ));
+                                                        width: MediaQuery.of(
+                                                                context)
+                                                            .size
+                                                            .width,
+                                                        margin: EdgeInsets
+                                                            .symmetric(
+                                                                horizontal:
+                                                                    5.0),
+                                                        decoration: BoxDecoration(
+                                                            image: DecorationImage(
+                                                                image:
+                                                                    AssetImage(
+                                                                        i),
+                                                                fit: BoxFit
+                                                                    .cover)),
+                                                      );
                                                     },
                                                   );
                                                 }).toList(),
@@ -225,11 +243,21 @@ class DetailHotel extends StatelessWidget {
                                             ),
                                             Container(
                                               child: Center(
-                                                child: Text('Qaysa Si Paling',
-                                                    style: TextStyle(
-                                                        fontSize: 22,
-                                                        fontWeight:
-                                                            FontWeight.bold)),
+                                                child: Container(
+                                                  height: 120,
+                                                  child: GFListTile(
+                                                    avatar: GFAvatar(
+                                                      backgroundImage: AssetImage(
+                                                          "images/profil.jpg"),
+                                                    ),
+                                                    titleText: 'Roy',
+                                                    subTitleText:
+                                                        'Recomended banget! hotel ' +
+                                                            hotelName
+                                                                .toString() +
+                                                            ' pas banget buat orang yang mau travelling',
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                           ]))
@@ -238,39 +266,6 @@ class DetailHotel extends StatelessWidget {
                         ),
                       ),
                     )),
-                Positioned(
-                  left: 25,
-                  bottom: 10,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ElevatedButton(
-                          style: ButtonStyle(
-                              shape: MaterialStateProperty.all<
-                                      RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          ))),
-                          onPressed: () {},
-                          child: Icon(Icons.favorite)),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      SizedBox(
-                        width: 263,
-                        child: ElevatedButton(
-                            style: ButtonStyle(
-                                shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                            ))),
-                            onPressed: () {},
-                            child: Text("Book Now (\$ 20)")),
-                      ),
-                    ],
-                  ),
-                ),
                 Positioned(
                     left: 10,
                     top: 10,

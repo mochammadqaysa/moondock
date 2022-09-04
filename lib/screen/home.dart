@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:moondock/screen/beranda.dart';
 import 'package:moondock/screen/detail_hotel.dart';
 import 'package:moondock/screen/find_hotel.dart';
+import 'package:moondock/screen/profile.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -50,7 +51,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         children: [
           Beranda(),
           FindHotel(),
-          Container(),
+          Profile(),
         ],
       ),
       bottomNavigationBar: Container(

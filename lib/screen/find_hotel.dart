@@ -30,16 +30,23 @@ class _FindHotelState extends State<FindHotel> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Column(
-        children: [
-          TextFormField(
-            readOnly: true,
-            onTap: () {
-              showSearch(
-                  context: context, delegate: SearchCondition(hotel, context));
-            },
-          )
-        ],
+      child: Container(
+        margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+        child: Column(
+          children: [
+            TextFormField(
+              decoration: InputDecoration(
+                  border: InputBorder.none,
+                  hintText: 'Please enter a search term'),
+              readOnly: true,
+              onTap: () {
+                showSearch(
+                    context: context,
+                    delegate: SearchCondition(hotel, context));
+              },
+            )
+          ],
+        ),
       ),
     );
   }
